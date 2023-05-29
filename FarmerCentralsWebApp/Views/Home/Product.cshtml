@@ -1,0 +1,90 @@
+﻿@model FarmerCentralsWebApp.Models.tblProduct
+
+@{
+    ViewBag.Title = "Product";
+}
+
+<h2 style="color:white">Product</h2>
+<style>
+    body {
+        background-image: url('/Images/thomas-gamstaetter-IFGVE61AAno-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    @*<h4>tblProduct</h4>*@
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div style="color:white" class="form-group">
+        @Html.LabelFor(model => model.farmerId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.farmerId, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.farmerId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div style="color:white" class="form-group">
+        @Html.LabelFor(model => model.prodTypeId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.prodTypeId, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.prodTypeId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div style="color:white" class="form-group">
+        @Html.LabelFor(model => model.prodName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.prodName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.prodName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div style="color:white" class="form-group">
+        @Html.LabelFor(model => model.bestBeforeDate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.bestBeforeDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.bestBeforeDate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div style="color:white" class="form-group">
+        @Html.LabelFor(model => model.price, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.price, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.price, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div style="color:white" class="form-group">
+        @Html.LabelFor(model => model.dateReceived, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.dateReceived, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.dateReceived, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div style="color:white" class="form-group">
+        @Html.LabelFor(model => model.dateSold, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.dateSold, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.dateSold, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Submit" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

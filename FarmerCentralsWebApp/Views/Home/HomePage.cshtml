@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "HomePage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <style>
+        body {
+            color: white;
+            font-weight:100;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            background-image: url('/Images/peter-kleinau-oP_xD70TpsI-unsplash.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn:hover {
+                background-color: #45a049;
+            }
+    </style>
+    <div class="container">
+        <h1>Welcome to Farm Central</h1>
+        <p>Discover fresh and organic farm produce!</p>
+        <p>At Farm Central, we take pride in delivering the highest quality fruits, vegetables, and dairy products directly from local farms to your table.</p>
+
+        <h2 style"color:">About Farm Central</h2>
+        <p>Farm Central is a family-owned business that has been cultivating and delivering farm-fresh produce for over 30 years. We are dedicated to promoting sustainable farming practices and supporting local farmers.</p>
+
+        <h2>Our Commitment to Quality</h2>
+        <p>When you choose Farm Central, you can trust that you're getting the best. We carefully select each product to ensure it meets our stringent quality standards. Our produce is grown using natural methods, without the use of harmful pesticides or synthetic additives.</p>
+
+        <h2>Explore Our Products</h2>
+        <p>We offer a wide range of seasonal fruits and vegetables, including juicy tomatoes, crisp lettuce, sweet strawberries, and much more. Our dairy section features farm-fresh milk, artisan cheeses, and creamy yogurts.</p>
+        <p>Whether you're a seasoned chef or a home cook, our diverse selection will inspire your culinary creations and add a delicious touch to every meal.</p>
+
+
+        <h2>Join Our Community</h2>
+        <p>Connect with us on social media to stay updated with the latest farm news, recipes, and special promotions. We love hearing from our customers and sharing our passion for wholesome food and sustainable agriculture.</p>
+
+        @Html.ActionLink("Join Our Community", "Register")
+    </div>

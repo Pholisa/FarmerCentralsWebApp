@@ -1,0 +1,62 @@
+﻿@model IEnumerable<FarmerCentralsWebApp.Models.tblProduct>
+
+@{
+    ViewBag.Title = "ProductList";
+}
+
+<h2 style="color:white">Product List</h2>
+
+<style>
+    body {
+        background-image: url('/Images/thomas-gamstaetter-IFGVE61AAno-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style> 
+<p>
+    @Html.ActionLink("Add New Product", "Product")
+</p>
+<table style="color:white" class="table">
+    <tr>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.prodName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bestBeforeDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateReceived)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateSold)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.prodName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bestBeforeDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateReceived)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateSold)
+        </td>
+       
+    </tr>
+}
+
+</table>

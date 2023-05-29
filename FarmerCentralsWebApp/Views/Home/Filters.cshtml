@@ -1,0 +1,44 @@
+﻿@model IEnumerable<FarmerCentralsWebApp.Models.tblProductType>
+
+@{
+    ViewBag.Title = "Search Item";
+}
+
+<h2 style="color:white">Filtered Results</h2>
+
+<style>
+    body {
+        background-image: url('/Images/thomas-gamstaetter-IFGVE61AAno-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    @Html.TextBox("searching")
+    <input type="submit" value="Submit" />
+}
+
+<table>
+    <tr>
+        <th style="color:white">
+            Product Type Name  |      
+        </th>
+        <th style="color:white">
+                   Quantity
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="color:white">
+                @Html.DisplayFor(modelItem => item.typeName)
+            </td>
+            <td style="color:white">
+                @Html.DisplayFor(modelItem => item.quantity)
+            </td>
+        </tr>
+    }
+</table>
+
